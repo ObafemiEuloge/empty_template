@@ -1,14 +1,14 @@
 /* Reset CSS */
 @import url(../Google-sans/font-face.css);
 @import url(../Metropolis_Fonts/@font-face.css);
-@import url(style_main.css);
-@import url(media_query.css);
+@import url(./style_main.css);
+@import url(./media_query.css);
 
 /* CSS VARIABLES */
 :root {
   --clr-primary: #1c83a3;
   --clr-secondary: #04baf3;
-  --clir-tertiairy: #fff;
+  --clr-tertiairy: #fff;
   --fz-part-title: 7rem;
 }
 
@@ -61,7 +61,7 @@ img {
   align-items: center;
   width: 100%;
   border-radius: 30px;
-  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+  background-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
 }
 
 .navbar .logo {
@@ -188,7 +188,7 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--clr-secondary);
-  color: var(--clir-tertiairy);
+  color: var(--clr-tertiairy);
   vertical-align: super;
   z-index: 0;
 }
@@ -312,11 +312,9 @@ img {
 
   .main {
     margin-inline: 0px;
-    /* text-align: center; */
   }
 
   .welcome-container .hero {
-    /* font-size: 8vw; */
     letter-spacing: 2px;
   }
 }
@@ -328,7 +326,7 @@ img {
   padding-block: 1em;
   width: 100%;
   text-align: center;
-  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+  background-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
 }
 
 .footer p {
@@ -366,10 +364,9 @@ img {
   display: inline-block;
   font-size: var(--fz-part-title);
   font-weight: bold;
-  /* background-color: var(--clr-secondary); */
   background-image: linear-gradient(to right, #1c83a3, #04baf3);
 
-  color: var(--clir-tertiairy);
+  color: var(--clr-tertiairy);
   vertical-align: super;
 }
 
@@ -425,7 +422,7 @@ img {
   border-bottom-right-radius: 2rem;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--clir-tertiairy);
+  color: var(--clr-tertiairy);
   background-image: linear-gradient(to right, #1c83a3, #04baf3);
 }
 
@@ -502,10 +499,8 @@ img {
   display: inline-block;
   font-size: var(--fz-part-title);
   font-weight: bold;
-  /* background-color: var(--clr-secondary); */
   background-image: linear-gradient(to right, #1c83a3, #04baf3);
-
-  color: var(--clir-tertiairy);
+  color: var(--clr-tertiairy);
   vertical-align: super;
 }
 
@@ -558,7 +553,7 @@ img {
   font-size: var(--fz-part-title);
   font-weight: bold;
   background-image: linear-gradient(to right, #1c83a3, #04baf3);
-  color: var(--clir-tertiairy);
+  color: var(--clr-tertiairy);
   vertical-align: super;
 }
 
