@@ -1,0 +1,598 @@
+/* Reset CSS */
+@import url(../Google-sans/font-face.css);
+@import url(../Metropolis_Fonts/@font-face.css);
+@import url(style_main.css);
+@import url(media_query.css);
+
+/* CSS VARIABLES */
+:root {
+  --clr-primary: #1c83a3;
+  --clr-secondary: #04baf3;
+  --clir-tertiairy: #fff;
+  --fz-part-title: 7rem;
+}
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: #e5e5e5;
+  font-family: Metropolis;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  padding: 50px;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+}
+
+.navbar .logo {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1.5px;
+  padding: 0.2em 0.5em;
+  border-radius: 30px;
+  color: #1f7c9a;
+  background-color: #e1e1e1;
+}
+
+.nav-links a {
+  color: #fff;
+  padding: 0.2em 0.6em;
+  white-space: nowrap;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 30px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.navbar .nav-links ul li a:hover {
+  background-color: #e1e1e1;
+  color: #1d81a2;
+}
+
+.navbar .nav-links ul li.active-page a {
+  padding: 0.2em 0.6em;
+  border-radius: 20px;
+  background-color: #e1e1e1;
+  color: #1d81a2;
+}
+
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  width: 25px;
+}
+
+@media screen and (max-width: 900px) {
+
+  /* HEADER */
+  .header {
+    padding: 50px 0 0 0;
+  }
+
+  .navbar .nav-links {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: #1c83a3;
+    display: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navbar .nav-links.mobile-menu {
+    opacity: 0.9;
+    z-index: 1;
+    display: block;
+  }
+
+  .navbar .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links ul li {
+    margin: 15px 0;
+  }
+
+  .navbar .menu-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar .menu-hamburger:hover {
+    opacity: 0.5
+  }
+}
+
+
+
+/* MAIN */
+/* WELCOME-CONTAINER */
+.main {
+  margin-inline: 50px;
+  text-align: center;
+}
+
+/* LETTER IN CIRCLE */
+.welcome-container {
+  margin-top: 5rem;
+}
+
+.welcome-container .circle_with_letter {
+  position: relative;
+  text-align: center;
+}
+
+.welcome-container .circle_with_letter .a_with_circle {
+  position: relative;
+  border-radius: 50%;
+  max-width: 15rem;
+  max-height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-secondary);
+  color: var(--clir-tertiairy);
+  vertical-align: super;
+  z-index: 0;
+}
+
+.welcome-container .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.welcome-container .hero span {
+  color: var(--clr-secondary);
+}
+
+.welcome-container .text-below {
+  margin-block: 2.5rem;
+  color: #000;
+}
+
+.text-below .span-sur {
+  font-size: 2em;
+}
+
+.text-below .span-entreprise {
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/*  */
+/* Découvrir btn */
+.decouvrir {
+  display: inline-block;
+  margin-top: 3rem;
+}
+
+.decouvrir .btn-decouvrir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #04baf3;
+  padding: 0.2rem 0.9rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50px;
+  color: #ededed;
+}
+
+.btn-decouvrir .cercle img {
+  width: 80%;
+
+}
+
+.btn-decouvrir .cercle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cercle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  margin-left: 10px;
+}
+
+/* La responsivité du font-size de la partie Bienvenue */
+@media screen and (max-width: 1040px) {
+  .welcome-container .hero {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .welcome-container .hero {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .welcome-container .hero {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .welcome-container .hero {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .welcome-container .hero {
+    font-size: 2rem;
+  }
+}
+
+
+/* ********************************************************* */
+@media screen and (max-width: 1033px) {
+  .text-below .span-entreprise {
+    font-size: 4vw;
+    font-weight: bold;
+  }
+
+  .text-below .span-sur {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .welcome-container .circle-container {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .welcome-container .circle-container {
+    gap: 10px;
+  }
+
+  .main {
+    margin-inline: 0px;
+    /* text-align: center; */
+  }
+
+  .welcome-container .hero {
+    /* font-size: 8vw; */
+    letter-spacing: 2px;
+  }
+}
+
+
+/* FOOTER */
+.footer {
+  margin-top: 400px;
+  padding-block: 1em;
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+}
+
+.footer p {
+  margin-block: 0;
+  font-size: 1.2em;
+}
+
+.footer .copyright {
+  font-weight: 500;
+  color: #000;
+}
+
+.footer .hu {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000;
+}
+
+
+
+/***********************************************************/
+/* Page ARTICLE */
+/* MAIN_ARTICLE */
+
+.main_article .circle_with_letter {
+  position: relative;
+  text-align: center;
+}
+
+.main_article article .a_with_circle {
+  position: relative;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font-size: var(--fz-part-title);
+  font-weight: bold;
+  /* background-color: var(--clr-secondary); */
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+
+  color: var(--clir-tertiairy);
+  vertical-align: super;
+}
+
+.main_article .hero span {
+  font-size: var(--fz-part-title);
+  color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+.main_article article .small-circle {
+  width: 4rem;
+  height: 4rem;
+  left: 1px;
+  top: 115px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--clr-secondary);
+}
+
+
+.main_article .img_section {
+  margin-top: 3rem;
+}
+
+.main_article figure {
+  text-align: center;
+}
+
+.main_article .two_sections {
+  padding-inline: 1rem;
+}
+
+.main_article .two_sections p {
+  padding-left: 1rem;
+  text-align: justify;
+}
+
+.two_sections h2 {
+  font-size: 2rem;
+  color: var(--clr-primary);
+}
+
+/* Image part */
+.img_section figure img {
+  border: 2px solid var(--clr-secondary);
+  padding: 1rem;
+}
+
+.img_section figure figcaption {
+  padding: 0.7rem;
+  border: 2px solid var(--clr-primary);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--clir-tertiairy);
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+}
+
+
+/* Taille du font-size des divs avec class 'circle_with_letter */
+@media screen and (max-width: 730px) {
+  .main_article .hero span {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_article .hero span {
+    font-size: 3rem;
+  }
+}
+
+
+
+/*****/
+@media screen and (min-width: 730px) {
+  .main_article .two_sections {
+    margin-top: 2rem;
+    display: flex;
+    flex-basis: 100%;
+    gap: 2.5rem;
+  }
+
+  .main_article .two_sections p {
+    padding-left: 0rem;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .main_article .img_section {
+    display: flex;
+  }
+
+  .img_section figure {
+    flex-basis: 40%;
+  }
+
+  .img_section .two_sections {
+    flex-basis: 60%;
+    gap: 0;
+    margin-top: 1rem;
+  }
+
+  .main_article .two_sections {
+    flex-direction: column;
+  }
+
+
+  .main_article .two_sections p {
+    padding-left: 1rem;
+    padding-right: 4rem;
+    margin-block: 5px;
+  }
+
+}
+
+
+/************************* A_propos title CSS ***********************************/
+.main_a_propos .circle_with_letter {
+  position: relative;
+  text-align: center;
+}
+
+.main_a_propos .a_with_circle {
+  position: relative;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font-size: var(--fz-part-title);
+  font-weight: bold;
+  /* background-color: var(--clr-secondary); */
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+
+  color: var(--clir-tertiairy);
+  vertical-align: super;
+}
+
+.main_a_propos .hero span {
+  font-size: var(--fz-part-title);
+  color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+.main_a_propos .small-circle {
+  width: 4rem;
+  height: 4rem;
+  left: 1px;
+  top: 115px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--clr-secondary);
+}
+
+/* Taille du font-size des divs avec class 'circle_with_letter */
+@media screen and (max-width: 730px) {
+  .main_a_propos .hero span {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_a_propos .hero span {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+/************************* Galerie title CSS ***********************************/
+.main_galerie {
+  margin-top: 4rem;
+}
+.main_galerie .circle_with_letter {
+  position: relative;
+  text-align: center;
+}
+
+.main_galerie .a_with_circle {
+  position: relative;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  font-size: var(--fz-part-title);
+  font-weight: bold;
+  background-image: linear-gradient(to right, #1c83a3, #04baf3);
+  color: var(--clir-tertiairy);
+  vertical-align: super;
+}
+
+.main_galerie .hero span {
+  font-size: var(--fz-part-title);
+  color: var(--clr-secondary);
+  font-weight: bold;
+}
+
+.main_galerie .small-circle {
+  width: 4rem;
+  height: 4rem;
+  left: 1px;
+  top: 115px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--clr-secondary);
+}
+
+/* Taille du font-size des divs avec class 'circle_with_letter */
+@media screen and (max-width: 730px) {
+  .main_galerie .hero span {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_galerie .hero span {
+    font-size: 3rem;
+  }
+}
+
+
+.para-title {
+  margin-block: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}

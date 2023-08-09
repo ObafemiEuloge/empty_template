@@ -1,0 +1,58 @@
+/*==========================MON MEDIA QUERY==========================*/
+/*=================Mode computer=================**/
+@media screen and (min-width:1101px){
+    .propos-grid{
+        display: grid;
+        column-gap: 2rem;
+        margin-inline: 3rem;
+    }
+
+    .propos-grid img{
+        height: auto;
+    }
+
+    h1,
+    h2{
+        font-size: 5rem;
+    }
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+/* *************TABLETTE****************** */
+@media screen and (min-width:780px) and (max-width:1100px){
+    .propos-grid{
+        display: grid;
+        column-gap: 2rem;
+        margin-inline:2rem;
+    }
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid9{
+        grid-area: 5/span4;
+    }
+    .voir{
+        grid-area: 6/1/6/2;
+    }
+}
+/* *************Mobile****************** */
+@media screen and (min-width:200px) and (max-width:779px){
+    .propos-grid {
+        margin-inline: 2rem;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .grid img{
+      width: 500px;
+    }
+    .voir{
+        padding-inline: 2rem;
+    }
+}
