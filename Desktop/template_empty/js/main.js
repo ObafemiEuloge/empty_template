@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // JS menu-hamburger
     const menuHamburger = document.querySelector('.menu-hamburger');
     const navLinks = document.querySelector('.nav-links');
+    
     //Footer
     const paragraphInFooter = document.querySelector('.footer__p');
     const body = document.querySelector('body');
