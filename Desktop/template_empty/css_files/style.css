@@ -1,8 +1,6 @@
 /* Reset CSS */
 @import url(../Google-sans/font-face.css);
 @import url(../Metropolis_Fonts/@font-face.css);
-@import url(./style_main.css);
-@import url(./media_query.css);
 
 /* CSS VARIABLES */
 :root {
@@ -579,15 +577,137 @@ img {
     font-size: 5rem;
   }
 }
+
 @media screen and (max-width: 400px) {
   .main_galerie .hero span {
     font-size: 3rem;
   }
 }
 
-
 .para-title {
   margin-block: 2rem;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+
+
+/* ************************* DU CODE CSS PROVENANT du fichier style_main.css ********************************* */
+/*===============================CSS COMMUN AUX CONTENUS DU MAIN===============================*/
+.main_a_propos>p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*********************************************************************/
+/*==============================A PROPOS==============================*/
+
+.main_a_propos {
+  margin-top: 10rem;
+}
+
+.para-primo {
+  margin-block: 3rem;
+}
+
+.main_a_propos .propos-grid {
+  margin-inline: 2rem;
+}
+
+.propos-grid .bordure {
+  border-radius: 3rem;
+  line-height: 2;
+  border-top: 2px var(--clr-primary) solid;
+  border-right: 2px var(--clr-primary) solid;
+  padding: 2rem 1rem 1rem 0;
+}
+
+.propos-grid .border img {
+  padding: 1rem;
+  border-radius: 3rem;
+  border-bottom: var(--clr-primary) solid;
+  border-left: var(--clr-primary) solid;
+}
+
+/********************* media query à propos part ****  ************/
+@media screen and (min-width: 1300px) {
+  .main_a_propos .propos-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 1rem;
+  }
+}
+
+/*=================================GALERIE=================================*/
+/* La classe .flex enfant de la classe parent .grid */
+.grid img {
+  height: 100%;
+  border: 1px solid var(--clr-secondary);
+  border-top-left-radius: 12%;
+  border-top-right-radius: 12%;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  margin-inline: 1.5rem;
+  gap: 1rem;
+}
+
+.grid .flex {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.flex p {
+  padding-block: 1rem;
+  border: 2px solid var(--clr-primary);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+}
+
+.flex p:hover {
+  background-image: linear-gradient(to right, var(--clr-secondary), var(--clr-primary));
+}
+
+.flex p a {
+  color: var(--clr-tertiairy);
+  font-weight: bold;
+  transition: all 1s;
+}
+
+.flex p a:hover {
+  color: #000;
+}
+
+.voir {
+  padding: 0.8rem 2rem;
+  border-radius: 5rem;
+  background-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
+  color: #000;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: all 2s;
+}
+
+a.voir:hover {
+  color: var(--clr-tertiairy);
+}
+
+
+/* Responsivité de la classe parent .grid */
+@media (min-width: 780px) {
+  .grid .flex {
+      flex-basis: calc((100% / 2) - 1rem);
+  }
+}
+
+@media (min-width: 980px) {
+  .grid .flex {
+      flex-basis: calc((100% / 3) - 1rem);
+  }
 }
