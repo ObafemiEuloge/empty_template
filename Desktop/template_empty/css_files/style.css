@@ -6,7 +6,7 @@
 :root {
   --clr-primary: #1c83a3;
   --clr-secondary: #04baf3;
-  --clr-tertiairy: #fff;
+  --clr-tertiairy: #e5e5e5;
   --fz-part-title: 7rem;
 }
 
@@ -23,7 +23,7 @@ body {
   padding: 0;
   line-height: 1.5;
   font-size: 16px;
-  background-color: #e5e5e5;
+  background-color: var(--clr-tertiairy);
   font-family: Metropolis;
 }
 
@@ -70,11 +70,11 @@ img {
   padding: 0.2em 0.5em;
   border-radius: 30px;
   color: #1f7c9a;
-  background-color: #e1e1e1;
+  background-color: var(--clr-tertiairy);
 }
 
 .nav-links a {
-  color: #fff;
+  color: var(--clr-tertiairy);
   padding: 0.2em 0.6em;
   white-space: nowrap;
   border-radius: 20px;
@@ -92,14 +92,14 @@ img {
 }
 
 .navbar .nav-links ul li a:hover {
-  background-color: #e1e1e1;
+  background-color: var(--clr-tertiairy);
   color: #1d81a2;
 }
 
 .navbar .nav-links ul li.active-page a {
   padding: 0.2em 0.6em;
   border-radius: 20px;
-  background-color: #e1e1e1;
+  background-color: var(--clr-tertiairy);
   color: #1d81a2;
 }
 
@@ -125,7 +125,7 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 2px solid #fff;
+    border: 2px solid var(--clr-tertiairy);
     border-radius: 20px;
     background-color: #1c83a3;
     display: none;

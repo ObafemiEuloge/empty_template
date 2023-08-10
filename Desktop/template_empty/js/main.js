@@ -14,9 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinks.classList.toggle('mobile-menu')
     });
 
-
+    // body
     if (!paragraphInFooter) {
         body.innerHTML = ' ';
     }
 
+    // Another ideas
+    const highfiveLink = document.querySelector('.hu');
+    const text = "Highfive University";
+    highfiveLink.innerHTML = text;
 })
